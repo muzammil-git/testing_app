@@ -12,6 +12,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:provider/provider.dart';
 import 'package:device_preview/device_preview.dart';
 
+import 'models/favorites_provider.dart';
 import 'models/theme_provider.dart';
 
 Future<void> main() async {
@@ -55,11 +56,11 @@ class MyApp extends StatelessWidget {
     //   // var brightness = SchedulerBinding.instance.platformDispatcher.platformBrightness;
     // });
 
-
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => LoginProvider()),
         ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        ChangeNotifierProvider(create: (_) => FavoritesProvider()),
       ],
       child: Consumer<ThemeProvider>(
           builder: (context, themeProvider, child) {

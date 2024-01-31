@@ -10,5 +10,4 @@ class LoginProvider with ChangeNotifier {
     _isLoggedIn = value;
     notifyListeners();
   }
-
 }

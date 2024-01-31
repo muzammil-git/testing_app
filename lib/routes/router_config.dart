@@ -1,6 +1,8 @@
+import 'package:fitness_app/screens/favorites.dart';
 import 'package:fitness_app/screens/landing_page.dart';
 import 'package:fitness_app/screens/premium_screen.dart';
 import 'package:fitness_app/screens/setting_screen.dart';
+import 'package:fitness_app/services/dialog_manager.dart';
 import 'package:fitness_app/utils/shared_prefs.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -13,6 +15,7 @@ import '../screens/onboarding/onboarding_screens.dart';
 // GoRouter configuration
 
 final router = GoRouter(
+  navigatorKey: DialogManager().getNavigatorKey(),
   redirect: (context, state){
 
     print("State Location: ${state.location}");
@@ -70,6 +73,11 @@ final router = GoRouter(
     GoRoute(
       path: '/onboarding',
       builder: (context, state) => OnboardingScreen(),
+    ),
+
+    GoRoute(
+      path: '/favorites',
+      builder: (context, state) => FavoritesPage(),
     ),
   ],
 

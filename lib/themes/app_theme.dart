@@ -10,7 +10,7 @@ class AppTheme {
       backgroundColor: Colors.blue,
       elevation: 0,
       titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
-      iconTheme: IconThemeData(color: Colors.black),
+      iconTheme: IconThemeData(color: Colors.white),
     ),
     textTheme: const TextTheme(
       displayLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
