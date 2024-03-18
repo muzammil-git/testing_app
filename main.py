@@ -19,7 +19,7 @@ async def root():
     res = jwt.decode(token, 'secret', algorithms=['HS256'])
     print(res)
 
-    print(f"Token: {token}")
+    print(f"TokenX: {token}")
     # print(datetime)
     return {"messagge": "Hello World"}
 
