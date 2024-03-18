@@ -9,6 +9,7 @@ import bcrypt
 app = FastAPI()
 date = datetime.utcnow()
 
+
 print(date)
 
 @app.get("/")
